@@ -1,1 +1,1 @@
-var name = 'hamza'; console.log(name);
+var name = 'hamza+++1'; console.log(name);

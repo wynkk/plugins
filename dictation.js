@@ -1,1 +1,1 @@
-var k = j = 0;
+var name = 'hamza'; console.log(name);

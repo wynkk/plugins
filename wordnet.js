@@ -1,4 +1,4 @@
-var wd = require("superscript/lib/wordnet"); 
+var wd = require("../lib/reply/wordnet"); 
 
 exports.wordnetDefine = function(cb) {
   var args = Array.prototype.slice.call(arguments);
@@ -11,10 +11,6 @@ exports.wordnetDefine = function(cb) {
   }
 
   wd.define(word, function(err, result){
-    if (err) {
-      cb(null,"");
-    } else {
-      cb(null, "The definition of " + word + " is " + result);
-    }
-  });
+    cb(null, "The Definition of " + word + " is " + result);  
+  })  
 }

@@ -27,12 +27,12 @@ exports.getDate = function(cb) {
 }
 
 exports.getDateTomorrow = function(cb) {
-	var date = moment().add(1,'d').format("ddd, MMMM Do");
+	var date = moment().add('d', 1).format("ddd, MMMM Do");
 	cb(null, date);
 }
 
 exports.getSeason = function(cb) {
-	var date = moment().add(1,'d').format("ddd, MMMM Do");
+	var date = moment().add('d', 1).format("ddd, MMMM Do");
 	cb(null, getSeason());
 }
 
@@ -40,8 +40,7 @@ exports.getTime = function(cb) {
 	var date = new Date();
 	var rounded = new Date(Math.round(date.getTime() / COEFF) * COEFF);
 	var time = moment(rounded).format("h:mm");
-	// TODO, dont say this every time.
-	cb(null, "I'm in Vancouver, so time is " + time + " here.");
+	cb(null, "The time is " + time);
 }
 
 exports.getTimeOfDay = function(cb) {
@@ -54,7 +53,7 @@ exports.getTimeOfDay = function(cb) {
 	} else if (time < 17) {
 		tod =  "afternoon"
 	} else {
-		tod =  "evening"
+		tod =  "night"
 	}
 
 	cb(null, tod);
@@ -67,9 +66,9 @@ exports.getDayOfWeek = function(cb) {
 exports.getMonth = function(cb) {
 	var reply = "";
 	if (this.message.words.indexOf("next") != -1) {
-		reply = moment().add(1,'M').format("MMMM");
+		reply = moment().add('M', 1).format("MMMM");
 	} else if (this.message.words.indexOf("previous") != -1) {
-		reply = moment().subtract(1,'M').format("MMMM");
+		reply = moment().subtract('M', 1).format("MMMM");
 	} else if (this.message.words.indexOf("first") != -1) {
 		reply = "January";
 	} else if (this.message.words.indexOf("last") != -1) {

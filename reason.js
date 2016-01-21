@@ -1,10 +1,10 @@
 
 var debug = require("debug")("Reason Plugin");
-var history = require("../lib/history");
-var Utils = require("../lib/utils");
+var history = require("superscript/lib/history");
+var Utils = require("superscript/lib/utils");
 var _ = require("lodash");
 var moment = require("moment");
-var wd = require("../lib/reply/wordnet"); 
+var wd = require("superscript/lib/reply/wordnet"); 
 
 exports.hasName = function(bool, cb) {
   this.user.getVar('name', function(e,name){

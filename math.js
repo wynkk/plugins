@@ -6,7 +6,7 @@
   - sequence functions
 */
 
-var math = require("../lib/math"); 
+var math = require("superscript/lib/math"); 
 var roman = require('roman-numerals');
 var debug = require("debug")("mathPlugin");
 

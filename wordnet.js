@@ -1,4 +1,4 @@
-var wd = require("../lib/reply/wordnet"); 
+var wd = require("superscript/lib/reply/wordnet"); 
 
 exports.wordnetDefine = function(cb) {
   var args = Array.prototype.slice.call(arguments);

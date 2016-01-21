@@ -1,5 +1,5 @@
 var debug = require("debug")("Message Plugin");
-var history = require("../lib/history");
+var history = require("superscript/lib/history");
 var _ = require("lodash");
 
 exports.addMessageProp = function(key, value, cb) {

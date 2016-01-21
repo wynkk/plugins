@@ -1,6 +1,6 @@
 var pluralize = require("pluralize");
 var debug = require("debug")("Word Plugin");
-var utils = require("../lib/utils");
+var utils = require("superscript/lib/utils");
 
 exports.plural = function(word, cb) {
   // Sometimes WordNet will give us more then one word

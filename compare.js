@@ -1,6 +1,6 @@
 var debug = require("debug")("Compare Plugin");
-var history = require("../lib/history");
-var Utils = require("../lib/utils");
+var history = require("superscript/lib/history");
+var Utils = require("superscript/lib/utils");
 var _ = require("lodash");
 var async = require("async");
 

@@ -1,7 +1,6 @@
 var codes = require('../bin/codes').results.collection1;
 var format = require('util').format;
 
-console.log(codes);
 module.exports.findCode = function (disease, cb) {
     disease = disease ||'';
     if (!disease) {
